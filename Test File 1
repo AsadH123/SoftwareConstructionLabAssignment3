@@ -1,2 +1,127 @@
 Hi I am Asad And I am going to upload som amazing thing for you . Hope you will like it . 
 Thanks . :)
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>JQ Aj samj K jaun Ga</title>
+    
+    <script src="main.js"></script>
+
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    1. Select Department<br>
+                    <input type="checkbox"  name="Computer Science" id="CS">Computer Science<br>
+                    <input type="checkbox"  name="Software Engineering" id="SE">Software Engineering<br>
+                    <input type="checkbox"  name="Architecture" id="ARC">Architecture<br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    2. Name (in capital letters)
+                    <input type="textbox" class="Name" name="Yours">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    3. Father's Name (in capital letters)
+                    <input type="textbox" class="Name" name="Father's">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    4. CNIC
+                    <input type="textbox" id="CNIC" name="Textbox" placeholder="XXXX-XXXXXXX-X">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    5. DOB
+                    <input type="textbox" id="dob" name="Textbox" placeholder="dd/mm/yy">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    6. E-mail Address
+                    <input type="textbox" id="E-mail" name="Textbox" placeholder="abc@gmail.com">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    7. Phone Number
+                    <input type="textbox" id="P.no" name="Textbox" placeholder="XXXX-XXXXXXX">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    8. Gender <br>
+                    <input type="checkbox" id="gender" name="Male">Male
+                    <input type="checkbox" id="gender" name="Female">Female
+                    <input type="checkbox" id="gender" name="Other">Other
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    9. Address
+                    <input type="textbox" id="address" name="Textbox">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    10. Employment Histroy 
+                    <select name="Years of Experience">
+                    <option value="Years of Experience">Years of Experience</option>    
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </td>
+            </tr>
+            <td>
+                <button type="button">Submit</button>
+            </td>
+            </tr>
+        </table>
+    </form>
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    //CheckBox
+    $(document).ready(function(){
+    $('input:checkbox').click(function() {
+        $('input:checkbox').not(this).prop('checked', false);
+    });
+});
+
+    //Uppercase
+    $(document).ready(function(){
+    $('#id').keyup(function(){
+        $(this).val($(this).val().toUpperCase());
+    });
+});
+
+    //CNIC
+    var cnic_no = '12345-1234567-9',
+var cnic_no_regex = /^[0-9+]{5}-[0-9+]{7}-[0-9]{1}$/;
+
+if(cnic_no_regex.test(cnic_no)) 
+{
+    alert('Right');
+}
+else 
+{
+    alert('Wrong');
+}
+
+</script>
+    </head>
+</body>
+</html>
